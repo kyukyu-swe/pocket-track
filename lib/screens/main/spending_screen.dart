@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:month_picker_dialog/month_picker_dialog.dart';
-import 'package:pie_chart/pie_chart.dart';
-import 'package:pocket_track/provider/transactions_provider.dart';
-import 'package:pocket_track/widgets/piechart_widget.dart';
+import '../../provider/transactions_provider.dart';
+import '../../widgets/piechart_widget.dart';
 import 'package:provider/provider.dart';
-
 import '../../constants/colors.dart';
 import '../../constants/decoration.dart';
 import '../../constants/style.dart';

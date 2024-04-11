@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:month_picker_dialog/month_picker_dialog.dart';
-import 'package:pocket_track/screens/transaction_history/expense_transactions_screen.dart';
+import '../transaction_history/expense_transactions_screen.dart';
 import 'package:provider/provider.dart';
-
 import '../../constants/colors.dart';
 import '../../constants/decoration.dart';
 import '../../constants/style.dart';
@@ -102,6 +100,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                 length: 2,
                 child: Column(
                   children: [
+                    /// transaction history tab bar
                     TabBar(
                         labelColor: primaryColor,
                         indicatorColor: primaryTextColor,

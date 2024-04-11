@@ -1,13 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pocket_track/constants/themes.dart';
-import 'package:pocket_track/provider/auth.dart';
-import 'package:pocket_track/provider/categories_provider.dart';
-import 'package:pocket_track/provider/transactions_provider.dart';
-import 'package:pocket_track/screens/login/auth_screen.dart';
-import 'package:pocket_track/screens/main/overall_screen.dart';
-import 'package:provider/provider.dart';
+import 'provider/auth.dart';
+import 'provider/categories_provider.dart';
+import 'provider/transactions_provider.dart';
+import 'screens/login/auth_screen.dart';
+import 'screens/main/overall_screen.dart';
+import "package:provider/provider.dart";
 
 import 'constants/colors.dart';
 import 'firebase_options.dart';
@@ -43,7 +42,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<Auth>(builder: (context, auth, _) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'Pocket Track',
           theme: ThemeData(
             useMaterial3: false,
             //fontFamily: 'Pyidaungsu',

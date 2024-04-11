@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constants/style.dart';
 
 Future<bool> confirmDeleteTran(BuildContext context) async {

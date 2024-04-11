@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:pocket_track/provider/transactions_provider.dart';
+import '../../provider/transactions_provider.dart';
 import 'package:provider/provider.dart';
-
 import '../../constants/colors.dart';
 import '../../constants/decoration.dart';
 import '../../constants/style.dart';

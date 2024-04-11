@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:pocket_track/screens/new_transactions/add_income_widget.dart';
-
+import 'add_income_widget.dart';
 import '../../constants/colors.dart';
 import '../../constants/decoration.dart';
 import '../../constants/style.dart';
@@ -104,6 +103,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                 child: Expanded(
                   child: Column(
                     children: [
+                      /// add new transaction history tab bar
                       TabBar(
                           labelColor: primaryColor,
                           indicatorSize: TabBarIndicatorSize.label,

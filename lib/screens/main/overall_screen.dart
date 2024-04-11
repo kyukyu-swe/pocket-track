@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_track/screens/main/account_screen.dart';
-import 'package:pocket_track/screens/main/categories_screen.dart';
-import 'package:pocket_track/screens/main/spending_screen.dart';
-import 'package:pocket_track/screens/main/transactions_screen.dart';
-import 'package:pocket_track/screens/new_transactions/add_transaction_screen.dart';
+import 'account_screen.dart';
+import 'categories_screen.dart';
+import 'spending_screen.dart';
+import 'transactions_screen.dart';
+import '../new_transactions/add_transaction_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../../constants/colors.dart';

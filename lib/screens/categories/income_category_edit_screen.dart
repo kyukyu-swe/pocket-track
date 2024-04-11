@@ -1,5 +1,4 @@
-import 'package:pocket_track/provider/categories_provider.dart';
-
+import '../../provider/categories_provider.dart';
 import '../../constants/colors.dart';
 import '../../constants/decoration.dart';
 import '../../constants/style.dart';

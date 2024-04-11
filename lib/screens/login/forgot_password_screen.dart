@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_track/screens/login/forgot_password_widget.dart';
-
+import 'forgot_password_widget.dart';
 import '../../constants/colors.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {

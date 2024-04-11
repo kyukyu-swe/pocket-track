@@ -1,9 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:pocket_track/provider/auth.dart';
-import 'package:pocket_track/screens/account/change_password_screen.dart';
+import '../../provider/auth.dart';
+import '../account/change_password_screen.dart';
 import 'package:provider/provider.dart';
-
 import '../../constants/colors.dart';
 import '../../constants/decoration.dart';
 import '../../constants/style.dart';

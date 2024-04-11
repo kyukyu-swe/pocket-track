@@ -14,6 +14,8 @@ class PieChartWidget extends StatelessWidget {
     }
     Map<String, double> resMap =
         dataMap.map((key, value) => MapEntry(key, value.toDouble()));
+
+    /// pie chart
     return PieChart(
       dataMap: resMap,
       animationDuration: Duration(milliseconds: 800),

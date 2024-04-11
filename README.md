@@ -1,16 +1,22 @@
 # pocket_track
 
-A new Flutter project.
 
-## Getting Started
+State management - Provider
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+change font style
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+pie chart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# colors
+change colors
+change card color
+
+
+# tab bar 
+transaction history tab bar
+add new transaction history tab bar
+categories tab bar
+
+

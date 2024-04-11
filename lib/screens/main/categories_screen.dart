@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_track/screens/categories/expense_categories_screen.dart';
-import 'package:pocket_track/screens/categories/income_categories_screen.dart';
-
+import '../categories/expense_categories_screen.dart';
+import '../categories/income_categories_screen.dart';
 import '../../constants/colors.dart';
 import '../../constants/style.dart';
 import '../categories/expense_category_edit_screen.dart';
@@ -53,6 +52,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
               // use index at here...
             }),
           ],
+
+          /// categories tab bar
           bottom: TabBar(
               labelColor: Colors.white,
               indicatorSize: TabBarIndicatorSize.label,

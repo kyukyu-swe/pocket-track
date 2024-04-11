@@ -1,9 +1,5 @@
-import 'dart:math';
-import 'package:pocket_track/constants/colors.dart';
-import 'package:provider/provider.dart';
+import '../../constants/colors.dart';
 import 'package:flutter/material.dart';
-
-import '../../provider/auth.dart';
 import 'auth_card_widget.dart';
 
 class AuthScreen extends StatelessWidget {

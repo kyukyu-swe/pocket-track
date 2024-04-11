@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_track/constants/colors.dart';
-import 'package:pocket_track/provider/categories_provider.dart';
+import '../../constants/colors.dart';
+import '../../provider/categories_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../constants/decoration.dart';

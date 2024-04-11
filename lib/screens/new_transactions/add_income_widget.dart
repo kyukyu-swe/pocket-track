@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_track/constants/style.dart';
 import 'package:provider/provider.dart';
-
 import '../../constants/decoration.dart';
 import '../../models/income.dart';
 import '../../provider/categories_provider.dart';
