@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "42311680268",
+    "project_id": "budget-tracking-62ca4",
+    "storage_bucket": "budget-tracking-62ca4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42311680268:android:8dd76b6cfa4935bd654929",
+        "android_client_info": {
+          "package_name": "com.example.budget_tracking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLllrlIq2G9YOl-abzRTr9Y5g9ex9rtwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42311680268:android:ef9224f4a807ca2d654929",
+        "android_client_info": {
+          "package_name": "com.example.pocket_track"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLllrlIq2G9YOl-abzRTr9Y5g9ex9rtwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
