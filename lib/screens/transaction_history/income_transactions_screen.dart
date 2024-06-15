@@ -5,6 +5,7 @@ import '../../constants/colors.dart';
 import '../../constants/decoration.dart';
 import '../../constants/style.dart';
 import '../../widgets/confirm_delete_tran.dart';
+import "../../utils/utils.dart";
 
 class IncomeTransactionsScreen extends StatefulWidget {
   final DateTime selectedDate;
@@ -48,7 +49,8 @@ class _IncomeTransactionsScreenState extends State<IncomeTransactionsScreen> {
               separatorBuilder: (context, index) => const SizedBox(height: 10),
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 1),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 1, horizontal: 15),
                   child: Container(
                     margin: const EdgeInsets.only(top: 10),
                     padding: const EdgeInsets.all(10),
@@ -62,12 +64,8 @@ class _IncomeTransactionsScreenState extends State<IncomeTransactionsScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(dailyTranList[index]['date'],
-                                style: primaryTextStyle(size: 15)),
-                            Text(
-                              dailyTranList[index]['totalSum'].toString(),
-                              style: secondaryTextStyle(
-                                  color: Colors.green, size: 15),
-                            ),
+                                style: boldTextStyle(
+                                    size: 15, color: lightgrayColor)),
                           ],
                         ),
                         const Divider(),
@@ -114,7 +112,7 @@ class _IncomeTransactionsScreenState extends State<IncomeTransactionsScreen> {
                                                   [index2]
                                               .category,
                                           overflow: TextOverflow.ellipsis,
-                                          style: primaryTextStyle(size: 14),
+                                          style: primaryTextStyle(size: 15),
                                         ),
                                         if (dailyTranList[index]['tranList']
                                                     [index2]
@@ -134,11 +132,10 @@ class _IncomeTransactionsScreenState extends State<IncomeTransactionsScreen> {
                                       ],
                                     ),
                                     Text(
-                                      dailyTranList[index]['tranList'][index2]
-                                          .amount
-                                          .toString(),
-                                      style: primaryTextStyle(size: 14),
-                                    )
+                                      "\฿ ${FormatUtil.formatNumberWithDecimals(dailyTranList[index]['tranList'][index2].amount.toDouble())}",
+                                      style: secondaryTextStyle(
+                                          color: lightgreenColor, size: 15),
+                                    ),
                                   ],
                                 ),
                               ),

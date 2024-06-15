@@ -65,7 +65,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                       decoration: BoxDecoration(
                         border:
                             Border.all(color: Colors.white.withOpacity(0.8)),
-                        color: Colors.white.withOpacity(0.1),
+                        color: primaryColor,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Row(
@@ -93,7 +93,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
               decoration: boxDecorationWithRoundedCorners(
                   backgroundColor: secondaryColor,
                   borderRadius:
-                      const BorderRadius.only(topRight: Radius.circular(30))),
+                      const BorderRadius.only(topRight: Radius.circular(0))),
               width: MediaQuery.of(context).size.width,
               // height: MediaQuery.of(context).size.height,
               child: DefaultTabController(
@@ -105,7 +105,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                         labelColor: primaryColor,
                         indicatorColor: primaryTextColor,
                         unselectedLabelColor: Colors.grey,
-                        labelStyle: primaryTextStyle(),
+                        labelStyle: primaryTextStyle(size: 18),
                         tabs: [
                           Tab(text: 'Income'),
                           Tab(text: 'Expense'),

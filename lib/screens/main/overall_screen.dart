@@ -59,7 +59,7 @@ class _OverallScreenState extends State<OverallScreen> {
               Text(
                 title,
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 10,
                   fontWeight: FontWeight.w700,
                   //height: 0.7,
                   color: selectedPos == pos ? primaryColor : Colors.black54,
@@ -93,7 +93,7 @@ class _OverallScreenState extends State<OverallScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   tabItem(0, 'Spending', Icons.add_chart_sharp),
-                  tabItem(1, 'Trans', Icons.table_chart),
+                  tabItem(1, 'Transaction', Icons.table_chart),
                   const SizedBox(width: 45, height: 45),
                   tabItem(2, 'Categories', Icons.pie_chart),
                   tabItem(3, 'Account', Icons.account_circle_rounded),

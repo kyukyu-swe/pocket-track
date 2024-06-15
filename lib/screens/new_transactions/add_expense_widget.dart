@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pocket_track/constants/style.dart';
 import '../../models/expense.dart';
+import '../../constants/colors.dart';
 import '../../provider/categories_provider.dart';
 import 'package:provider/provider.dart';
 import '../../constants/decoration.dart';
@@ -175,13 +177,19 @@ class _AddExpenseWidgetState extends State<AddExpenseWidget> {
           const SizedBox(height: 10),
           ElevatedButton(
               onPressed: _onSave,
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryColor,
+                  padding: EdgeInsets.only(top: 10, bottom: 10)),
               child: _isLoading
                   ? const SizedBox(
                       height: 20,
                       width: 20,
                       child: CircularProgressIndicator(color: Colors.white),
                     )
-                  : const Text('Save'))
+                  : Text(
+                      'Save',
+                      style: boldTextStyle(color: Colors.white, size: 15),
+                    ))
         ],
       ),
     );

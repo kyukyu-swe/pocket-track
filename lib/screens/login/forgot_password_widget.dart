@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pocket_track/constants/style.dart';
 import 'package:provider/provider.dart';
 import '../../provider/auth.dart';
 import 'auth_card_widget.dart';
+import '../../constants/colors.dart';
 
 class ForgotPasswordWidget extends StatefulWidget {
   const ForgotPasswordWidget({
@@ -160,7 +162,13 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                       Expanded(
                         child: ElevatedButton(
                           onPressed: _submit,
-                          child: Text('Reset Password'),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: primaryColor,
+                              padding: EdgeInsets.only(top: 10, bottom: 10)),
+                          child: Text(
+                            'Reset Password',
+                            style: boldTextStyle(color: Colors.white, size: 15),
+                          ),
                           // shape: RoundedRectangleBorder(
                           //   borderRadius: BorderRadius.circular(30),
                           // ),

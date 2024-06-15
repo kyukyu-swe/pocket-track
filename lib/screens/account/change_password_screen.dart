@@ -70,6 +70,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
     return Scaffold(
       backgroundColor: secondaryColor,
       appBar: AppBar(
+        backgroundColor: primaryColor,
         title: Text(
           'Change Password',
           style: secondaryTextStyle(size: 16),
@@ -138,13 +139,19 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
               SizedBox(height: 12.0),
               ElevatedButton(
                 onPressed: _changePassword,
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: primaryColor,
+                    padding: EdgeInsets.only(top: 10, bottom: 10)),
                 child: _isLoading
                     ? SizedBox(
                         height: 20,
                         width: 20,
                         child: CircularProgressIndicator(color: Colors.white),
                       )
-                    : Text('Change Password'),
+                    : Text(
+                        'Change Password',
+                        style: boldTextStyle(color: Colors.white, size: 15),
+                      ),
               ),
             ],
           ),

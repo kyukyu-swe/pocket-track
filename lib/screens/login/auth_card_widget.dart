@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pocket_track/constants/style.dart';
 import 'forgot_password_screen.dart';
 import 'package:provider/provider.dart';
+import '../../constants/colors.dart';
 
 import '../../provider/auth.dart';
 
@@ -211,9 +213,13 @@ class _AuthCardState extends State<AuthCard>
                       Expanded(
                         child: ElevatedButton(
                           onPressed: _submit,
-                          child: Text(_authMode == AuthMode.Login
-                              ? 'LOGIN'
-                              : 'SIGN UP'),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: primaryColor,
+                              padding: EdgeInsets.only(top: 10, bottom: 10)),
+                          child: Text(
+                            _authMode == AuthMode.Login ? 'Log In' : 'Sign Up',
+                            style: boldTextStyle(color: Colors.white, size: 15),
+                          ),
                           // shape: RoundedRectangleBorder(
                           //   borderRadius: BorderRadius.circular(30),
                           // ),

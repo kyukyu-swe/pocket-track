@@ -160,6 +160,43 @@ class TransactionsProvider with ChangeNotifier {
     return sortedMap;
   }
 
+  List<Map<String, dynamic>> AllTransactionsForOneMonth() {
+    List<Map<String, dynamic>> processTransactions(
+        List<dynamic> transactions, String status) {
+      List<Map<String, dynamic>> dailyTransactionList = [];
+      for (int index = 0; index <= transactions.length - 1; index++) {
+        dailyTransactionList.add({
+          'date': DateFormat('dd MMM, yyyy, HH:mm:ss')
+              .format(transactions[index].date),
+          'category': transactions[index].category,
+          'totalSum': transactions[index].amount,
+          'status': status,
+        });
+      }
+      return dailyTransactionList;
+    }
+
+    // Process income and expense lists
+    List<Map<String, dynamic>> incomedailyTranList =
+        processTransactions(incomeList, 'income');
+    List<Map<String, dynamic>> expensedailyTranList =
+        processTransactions(expenseList, 'expense');
+
+    // Combine and sort all transactions
+    List<Map<String, dynamic>> alldailyTranList = [
+      ...incomedailyTranList,
+      ...expensedailyTranList
+    ];
+
+    alldailyTranList.sort((a, b) => DateFormat('dd MMM, yyyy, HH:mm:ss')
+        .parse(b['date'])
+        .compareTo(DateFormat('dd MMM, yyyy, HH:mm:ss').parse(a['date'])));
+
+    return alldailyTranList.length > 5
+        ? alldailyTranList.sublist(0, 5)
+        : alldailyTranList;
+  }
+
   List<Map<String, dynamic>> incomeTransactionsForOneMonth() {
     List<Income> dayTranList = incomeList;
 

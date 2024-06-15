@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../categories/expense_categories_screen.dart';
 import '../categories/income_categories_screen.dart';
 import '../../constants/colors.dart';
+import '../../constants/decoration.dart';
 import '../../constants/style.dart';
 import '../categories/expense_category_edit_screen.dart';
 import '../categories/income_category_edit_screen.dart';
@@ -14,6 +15,7 @@ class CategoriesScreen extends StatefulWidget {
 }
 
 class _CategoriesScreenState extends State<CategoriesScreen> {
+  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -22,6 +24,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           child: Scaffold(
         appBar: AppBar(
           backgroundColor: primaryColor,
+          shadowColor: secondaryColor,
           title: Text(
             'Categories',
             style: secondaryTextStyle(size: 16),
@@ -30,8 +33,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             Builder(builder: (context) {
               return IconButton(
                   onPressed: () {
-                    final index = DefaultTabController.of(context).index;
-                    if (index == 0) {
+                    if (_selectedIndex == 0) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -52,25 +54,46 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
               // use index at here...
             }),
           ],
-
-          /// categories tab bar
-          bottom: TabBar(
-              labelColor: Colors.white,
-              indicatorSize: TabBarIndicatorSize.label,
-              unselectedLabelColor: Colors.white60,
-              labelStyle: secondaryTextStyle(size: 14),
-              tabs: const [
-                Tab(text: 'Income'),
-                Tab(text: 'Expense'),
-              ]),
         ),
-        body: const Column(
+        body: Column(
           children: [
             Expanded(
-              child: TabBarView(children: [
-                IncomeCategoriesScreen(),
-                ExpenseCategoriesScreen(),
-              ]),
+              child: Container(
+                decoration: boxDecorationWithRoundedCorners(
+                    backgroundColor: secondaryColor,
+                    borderRadius:
+                        const BorderRadius.only(topRight: Radius.circular(0))),
+                width: MediaQuery.of(context).size.width,
+                child: DefaultTabController(
+                  length: 2,
+                  child: Column(
+                    children: [
+                      /// transaction history tab bar
+                      TabBar(
+                          labelColor: primaryColor,
+                          indicatorColor: primaryTextColor,
+                          unselectedLabelColor: Colors.grey,
+                          labelStyle: primaryTextStyle(size: 18),
+                          onTap: (value) {
+                            setState(() {
+                              _selectedIndex =
+                                  value; // Update the selected index on tab tap
+                            });
+                          },
+                          tabs: [
+                            Tab(text: 'Income'),
+                            Tab(text: 'Expense'),
+                          ]),
+                      Expanded(
+                        child: TabBarView(children: [
+                          IncomeCategoriesScreen(),
+                          ExpenseCategoriesScreen(),
+                        ]),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             )
           ],
         ),

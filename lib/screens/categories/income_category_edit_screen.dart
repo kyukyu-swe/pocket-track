@@ -59,7 +59,7 @@ class _IncomeCategoryEditScreenState extends State<IncomeCategoryEditScreen> {
           //margin: EdgeInsets.only(top: 30),
           decoration: boxDecorationWithRoundedCorners(
               backgroundColor: secondaryColor,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(32))),
+              borderRadius: BorderRadius.only(topRight: Radius.circular(0))),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Padding(
@@ -76,9 +76,9 @@ class _IncomeCategoryEditScreenState extends State<IncomeCategoryEditScreen> {
                           horizontal: 8, vertical: 6),
                       child: Text(
                         widget.categoryName == null
-                            ? 'Add income category'
-                            : 'Edit income category',
-                        style: primaryTextStyle(),
+                            ? 'Add Income Category'
+                            : 'Edit Income Category',
+                        style: primaryTextStyle(size: 18),
                       ),
                     ),
                     IconButton(
@@ -105,6 +105,9 @@ class _IncomeCategoryEditScreenState extends State<IncomeCategoryEditScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                         onPressed: _onSave,
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: primaryColor,
+                            padding: EdgeInsets.only(top: 10, bottom: 10)),
                         child: _isLoading
                             ? SizedBox(
                                 height: 20,
@@ -114,7 +117,8 @@ class _IncomeCategoryEditScreenState extends State<IncomeCategoryEditScreen> {
                               )
                             : Text(
                                 'Save',
-                                style: secondaryTextStyle(),
+                                style: boldTextStyle(
+                                    size: 15, color: Colors.white),
                               ))),
               ],
             ),

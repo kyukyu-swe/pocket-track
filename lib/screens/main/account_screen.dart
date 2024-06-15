@@ -21,7 +21,7 @@ class AccountScreen extends StatelessWidget {
           //margin: EdgeInsets.only(top: 90),
           decoration: boxDecorationWithRoundedCorners(
               backgroundColor: secondaryColor,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(32))),
+              borderRadius: BorderRadius.only(topRight: Radius.circular(0))),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Padding(
@@ -111,7 +111,10 @@ class AccountScreen extends StatelessWidget {
                                   showDialog(
                                     context: context,
                                     builder: (ctx) => AlertDialog(
-                                      title: Text('Are you sure?'),
+                                      title: Text(
+                                        'Are you sure?',
+                                        style: boldTextStyle(),
+                                      ),
                                       content: Text('Do you want to log out ?'),
                                       actions: <Widget>[
                                         TextButton(

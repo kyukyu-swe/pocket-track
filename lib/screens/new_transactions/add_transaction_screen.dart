@@ -42,7 +42,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
         decoration: boxDecorationWithRoundedCorners(
             backgroundColor: secondaryColor,
             borderRadius:
-                const BorderRadius.only(topRight: Radius.circular(30))),
+                const BorderRadius.only(topRight: Radius.circular(0))),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Column(
@@ -53,9 +53,13 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    icon: const Icon(Icons.arrow_back_ios_rounded)),
+                    icon: const Icon(
+                      Icons.arrow_back_ios_rounded,
+                      color: primaryColor,
+                      size: 20,
+                    )),
                 Text(
-                  'AddNewTransaction',
+                  'Add Transaction',
                   style: primaryTextStyle(),
                 ),
                 const Spacer(),
@@ -108,7 +112,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                           labelColor: primaryColor,
                           indicatorSize: TabBarIndicatorSize.label,
                           unselectedLabelColor: Colors.grey,
-                          labelStyle: primaryTextStyle(size: 14),
+                          labelStyle: primaryTextStyle(size: 15),
                           tabs: const [
                             Tab(text: 'Income'),
                             Tab(text: 'Expense'),

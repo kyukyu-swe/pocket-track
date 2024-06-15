@@ -5,9 +5,8 @@ Future<bool> confirmDeleteTran(BuildContext context) async {
   return await showDialog(
     context: context,
     builder: (ctx) => AlertDialog(
-      title: Text('Are you sure!', style: primaryTextStyle(size: 14)),
-      content:
-          Text('Do you want to delete ?', style: primaryTextStyle(size: 14)),
+      title: Text('Are you sure!', style: primaryTextStyle(size: 18)),
+      content: Text('Do you want to delete ?', style: boldTextStyle(size: 14)),
       actions: <Widget>[
         TextButton(
           child: Text('No', style: primaryTextStyle(size: 14)),

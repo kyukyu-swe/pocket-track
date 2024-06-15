@@ -63,7 +63,7 @@ class _ExpenseCategoriesScreenState extends State<ExpenseCategoriesScreen> {
                                         '  ${index + 1}. ${expCateList[index]}',
                                         softWrap: false,
                                         overflow: TextOverflow.ellipsis,
-                                        style: primaryTextStyle(size: 14),
+                                        style: primaryTextStyle(size: 15),
                                       ),
                                     ),
                                   ],
@@ -82,7 +82,7 @@ class _ExpenseCategoriesScreenState extends State<ExpenseCategoriesScreen> {
                                   },
                                   icon: const Icon(
                                     Icons.edit,
-                                    color: Colors.green,
+                                    color: lightgreenColor,
                                   )),
                               IconButton(
                                   onPressed: () async {
@@ -92,11 +92,10 @@ class _ExpenseCategoriesScreenState extends State<ExpenseCategoriesScreen> {
                                         builder: (ctx) => AlertDialog(
                                           title: Text('Can\'t be deleted!',
                                               style:
-                                                  primaryTextStyle(size: 14)),
+                                                  primaryTextStyle(size: 16)),
                                           content: Text(
                                               'There must be at least one category',
-                                              style:
-                                                  primaryTextStyle(size: 14)),
+                                              style: boldTextStyle(size: 14)),
                                           actions: <Widget>[
                                             TextButton(
                                               child: Text('Ok',
@@ -120,7 +119,7 @@ class _ExpenseCategoriesScreenState extends State<ExpenseCategoriesScreen> {
                                   },
                                   icon: const Icon(
                                     Icons.delete,
-                                    color: Colors.red,
+                                    color: lightredColor,
                                   )),
                             ],
                           ));
